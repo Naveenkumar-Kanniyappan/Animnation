@@ -1,0 +1,224 @@
+:root{
+    --box-1-bg-color:yellow;
+    --box-2-bg-color:green;
+    --box-3-bg-color:red;
+    --box-4-bg-color: darkblue;
+    --box-5-bg-color:blue;
+    --box-6-bg-color:rgb(248, 103, 127);
+}
+
+body{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: lightblue;
+
+}
+.main-container{
+    width: 80%;
+}
+.sub-container{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box-1{
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    border: 1px solid black; 
+    display: flex;  
+    align-items: center;
+   
+}
+.box-1 span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    height: 50px;
+    width: 50px; 
+    background-color: var(--box-1-bg-color);
+    position: relative;
+    animation: box-1-moving 2s infinite;
+    animation-duration: 1s;
+}
+.box-2{
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.box-2 span{
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--box-2-bg-color);
+    position: relative;
+    animation: box-2-bounce 2s infinite;
+    animation-duration: 0.5s;
+}
+.box-3{
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.box-3 span{
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+    background-color: var(--box-3-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation:box-3-flip 1s infinite;
+    animation-timing-function: 1s;
+   
+}
+
+.box-4{
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-4 span{
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--box-4-bg-color);
+    position: relative;
+    animation: box-4-rotate 2s infinite;
+   animation-duration: 1s;
+}
+.box-5{
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-5 .box-Zoomhover{
+    height: 60px;
+    width: 60px;
+    font-size: small;
+    background-color: var(--box-5-bg-color);
+}
+.box-5 .box-Zoom{
+    height: 55px;
+    width: 30px;
+    font-size: small;
+    border-radius: 4px;
+    background-color: var(--box-5-bg-color);
+    display: flex;
+    align-items: center;
+    position: relative;
+    animation: box-zoom 1s infinite;
+    animation-duration: 1s;
+}
+.box-5 .box-Zoomhover{
+    border-radius: 4px;
+}
+.box-5 .box-Zoomhover:hover{
+     transform: scale(1.5);
+}
+.box-6{
+    height: 250px;
+    width: 250px;;
+    margin: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-6 span{
+    height: 50px;
+    width: 50px;
+    font-size: small;
+    background-color: var(--box-6-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation:  box-rotzoom 1s infinite;
+    animation-duration: 1.5s;
+}
+
+
+
+@keyframes box-1-moving{
+    0%{
+        left: 0px;
+    }
+    100%{
+        left: 140px;
+    }
+}
+
+@keyframes box-2-bounce {
+    0%{
+        bottom: 20px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+@keyframes box-3-flip {
+    0%{
+        transform:rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(180deg);
+    }
+}
+@keyframes box-4-rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes box-zoom {
+    0%{
+        transform: scale(0px);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+@keyframes box-rotzoom {
+    0%{
+        transform: rotate(0deg); 
+    }
+
+   
+    100%{
+        width : 100px;
+        height : 100px;
+        transform: rotate(180deg);
+    }
+
+
+}
